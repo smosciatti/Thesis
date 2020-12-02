@@ -1,0 +1,79 @@
+*************************
+****** RELEASE 2.2 ******
+*************************
+Bug fixed
+Client integration
+GUI added
+Code cleaning
+
+*************************
+****** RELEASE 2.1 ******
+*************************
+Migrate to firebird 1.5, jaybird 1.5.0Beta3JDK_1.4
+1)handling alias dbName ($FIREBIRD_HOME/aliases.conf)
+2) NewDb now is Jsp Page
+
+
+*************************
+****** RELEASE 2.0 ******
+*************************
+Migrate to firebird 1.5  RC8 and jaybird 1.5.0BetaJDK_1.4
+
+1)remove unecessary library
+jboss 3.x servlet
+ant
+jboss3x client
+Servlet (war size old 2.83 new 2.13 Mb)
+
+
+2)deleteServlet,Profile,RegistrationServlet,consoleController
+Add clearParameters() statement call
+correct type parameter (setString->setInt)
+every exception raise a Servlet Exception
+
+3)Add CLASS_TYPE table to store jdbc drivers information (administrator only)
+CREATE TABLE "CLASS_TYPE"                EX
+(
+  "CLASS"	VARCHAR(15) NOT NULL,    Firebird
+  "JAVA_DRIVER"	VARCHAR(60) NOT NULL,    org.firebirdsql.jdbc.FBDriver
+  "PORT"	NUMERIC(4, 0) NOT NULL,  3050
+  "PREFIX_URL"	VARCHAR(20) NOT NULL,    jdbc:firebirdsql:
+ PRIMARY KEY ("CLASS")
+);
+
+4)Add PARAM table to store db connection
+CREATE TABLE "DB_TYPE"
+(
+  "USER_NAME"   VARCHAR(15) NOT NULL,   bruto
+  "DB_ALIAS"	VARCHAR(15) NOT NULL,   UTENTI
+  "CLASS"	VARCHAR(15) NOT NULL,   Firebird
+  "URL"	VARCHAR(200) NOT NULL,          localhost:3050/D:/Tool_java/db/acmecb.gdb OR
+                                        localhost/D:/Tool_java/db/acmecb.gdb OR
+                                        localhost/acmecb
+
+ PRIMARY KEY ("USER_NAME", "DB_ALIAS")
+);
+ALTER TABLE "DB_TYPE" ADD FOREIGN KEY ("CLASS") REFERENCES "CLASS_TYPE" ("CLASS");
+
+ALTER TABLE "DB_TYPE" ADD FOREIGN KEY ("USER_NAME") REFERENCES "USERS" ("USER_NAME");
+
+
+5)header.jsp
+    correct aligment  menu' user
+    add dbSetting choice (admin)
+
+6)headerAdm.jsp
+     add dbSetting
+
+7)delete duplicate dataSource definition from jsp page
+
+8) rename register.html to newUser.html
+
+9) add db alias $firebird_home/aliases.conf
+
+***********************
+******RELEASE 1.0******
+***********************
+all new ;)
+
+

@@ -1,0 +1,81 @@
+<html>
+  <head>
+ <title>
+Welcome to dbConsole - Registration page
+</title>
+<link href="Style.css" rel="stylesheet" type="text/css">
+<script
+ src="./scripts/validate.js">
+</script>
+  </head>
+  <body bgcolor="#F8F8F8">
+  <div id="schermo" style="position:absolute; left:80px; top:60px; width:851px; height:443px; z-index:1; color: #FFFFFF; overflow: auto; " >
+
+
+<form  onsubmit="return validateForm(this)"  action="/dbConsole/jsp/registerServlet" method="post" name="frmRegistration" id="frmRegistration">
+   User Registration
+  <table width="66%" border="0">
+    <tr>
+      <td height="24"><div align="right" ><strong>First Name:</strong></div></td>
+      <td height="24" >
+        <input name="firstName" type="text" maxlength="15">
+      </td>
+    </tr>
+    <tr>
+      <td height="6"><div align="right" >Last Name:</div></td>
+      <td height="6" >
+        <input name="lastName" type="text" maxlength="15">
+      </td>
+    </tr>
+    <tr>
+      <td height="6"><div align="right" ><strong>e-mail Address:</strong></div></td>
+      <td height="6" >
+        <input name="email" type="text" id="email" maxlength="40">
+      </td>
+    </tr>
+    <tr>
+      <td height="6"><div align="right" ><strong> Username:</strong></div></td>
+      <td height="6"><div align="left">
+          <span >
+          <input name="name" type="text" maxlength="15">
+          </span></div></td>
+    </tr>
+    <tr>
+      <td height="6"><div align="right" ><strong> Role:</strong></div></td>
+      <td height="6" >        <select name="role" id="role">
+            <option value="user">User</option>
+            <option value="admin">Administrator</option>
+        </select>          </td>
+    </tr>
+    <tr>
+      <td height="6"><div align="right" ><strong> Password:</strong></div></td>
+      <td height="6"><div align="left">
+          <span >
+          <input name="password" type="password" maxlength="15">
+          </span></div></td>
+    </tr>
+    <tr>
+      <td height="27" nowrap><div align="right" ><strong>Please confirm password:</strong></div></td>
+      <td height="27" nowrap >
+        <input name="password2" type="password" maxlength="15">
+      </td>
+    </tr>
+    <tr>
+      <td width="251" height="6"> <div align="right">
+          <span >
+          <input name="submit" type="submit" value="Register">
+        </span></div></td>
+      <td width="362" height="6"> <div align="left">
+          <span >
+          <input type="reset" name="Reset" value="Reset">
+          <input name="BtnBack" type="button" id="BtnBack" value="Back" onClick=window.history.back()>
+          <input name="hiddArrived" type="hidden" id="hiddArrived" value="newUser">
+          </span></div></td>
+    </tr>
+  </table>
+</form>
+</div>
+<div align="left"><img src="images/main.jpg" width="950" height="526" hspace="0" vspace="0" align="top">
+</div>
+</body>
+</html>

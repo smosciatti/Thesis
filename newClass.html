@@ -1,0 +1,61 @@
+<html>
+  <head>
+ <title>
+Welcome to dbConsole - Registration page
+</title>
+<link href="Style.css" rel="stylesheet" type="text/css">
+
+<script
+ src="./scripts/validate.js">
+</script>
+  </head>
+  <body bgcolor="#F8F8F8">
+  <div id="schermo" style="position:absolute; left:80px; top:60px; width:851px; height:443px; z-index:1; color: #FFFFFF; overflow: auto; " class="style1">
+
+<h2 class="style1">Class Registration </h2>
+<form  onsubmit="return validateClass(this)"  action="/dbConsole/jsp/registerServlet" method="post" name="frmRegClass" id="frmRegClass">
+  <table width="66%" border="0">
+    <tr>
+      <td height="24"><div align="right" class="style1"><strong>Class:</strong></div></td>
+      <td height="24" class="style1">
+        <input name="class_name" type="text" id="class_name" maxlength="15">
+      </td>
+    </tr>
+    <tr>
+      <td height="6"><div align="right" class="style1"><strong>Driver:</strong></div></td>
+      <td height="6" class="style1">
+        <input name="java_driver" type="text" id="java_driver" maxlength="60">
+      </td>
+    </tr>
+    <tr>
+      <td height="6"><div align="right" class="style1"><strong>Standard Port:</strong></div></td>
+      <td height="6" class="style1">
+        <input name="std_port" type="text" id="std_port" maxlength="4">
+      </td>
+    </tr>
+    <tr>
+      <td height="6"><div align="right" class="style1"><strong> Prefix URL:</strong></div></td>
+      <td height="6"><div align="left">
+          <span class="style1">
+          <input name="prefix_url" type="text" id="prefix_url" maxlength="20">
+          </span></div></td>
+    </tr>
+    <tr>
+      <td width="251" height="6"> <div align="right">
+          <span class="style1">
+          <input name="submit" type="submit" value="Register">
+          </span></div></td>
+      <td width="362" height="6"> <div align="left">
+          <span class="style1">
+          <input type="reset" name="Reset" value="Reset">
+          <input name="BtnBack" type="button" id="BtnBack" value="Back" onClick=window.history.back()>
+          <input name="hiddArrived" type="hidden" id="hiddArrived" value="newClass">
+          </span></div></td>
+    </tr>
+  </table>
+</form>
+</div>
+<div align="left"><img src="images/main.jpg" width="950" height="526" hspace="0" vspace="0" align="top">
+</div>
+</body>
+</html>

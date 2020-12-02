@@ -1,0 +1,11 @@
+[PropertyInfo]
+mnuAlias,String,false,false, , ,true,<default>
+mnuAliasVal,String,false,false, , ,true,<default>
+mnuClass,String,false,false, , ,true,<default>
+mnuURL,String,false,false, , ,true,<default>
+sample,String,false,false, , ,true,<default>
+[IconNames]
+
+
+
+
